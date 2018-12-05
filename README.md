@@ -5,7 +5,9 @@ The scripts within `model.R` rely on data in the folder `dat/` (initially produc
 
 The scripts are setup to work with the following directory structure:
 
+```
 Parental_Age_Scripts/ (working directory)
   dat/
   img/
   R/
+```
