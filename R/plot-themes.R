@@ -19,7 +19,7 @@ tt2 <- theme_bw() +
         plot.title = element_text(size = 10, vjust = -0.8),
         axis.text.y = element_text(angle = 90, hjust = 0.5),
         axis.title.x = element_text(margin = margin(0.2, 0, 0, 0, unit = 'cm')),
-        plot.margin = unit(c(0.1, 0.1, 0.1, 0.1), 'cm'))
+        plot.margin = unit(c(0.1, 0.1, 0.1, 0.2), 'cm'))
 
 
 tt3 <- theme_bw() +
@@ -40,7 +40,7 @@ tt3 <- theme_bw() +
         legend.text.align = 0,
         legend.key.width = unit(0.9, 'lines'),
         legend.key.height = unit(0.8, 'lines'),
-        plot.margin = unit(c(0.15, 0.15, 0.15, 0.15), 'cm'))
+        plot.margin = unit(c(0.15, 0.15, 0.15, 0.25), 'cm'))
 
 
 tt4 <- theme_bw() +
@@ -65,15 +65,15 @@ tt5 <- theme_bw() +
         axis.title.x = element_text(margin = margin(0.2, 0, 0, 0, unit = 'cm')),
         strip.background = element_blank(),
         strip.text.x = element_text(size = 10),
-        plot.margin = unit(c(1.5, 5.5, 1.5, 5.5), units = 'pt'),
+        plot.margin = unit(c(1.5, 20, 1.5, 5.5), units = 'pt'),
         legend.justification = c(0, 0),
         legend.background = element_blank(),
         legend.key = element_rect(fill = NA, color = NA),
-        legend.position = c(0.76, 0),
+        legend.position = c(0.802, 0),
         legend.title = element_blank(),
-        legend.text = element_text(size = 7.4),
+        legend.text = element_text(size = 8),
         legend.text.align = 0,
-        legend.key.width = unit(0.9, 'lines'),
+        legend.key.width = unit(0.8, 'lines'),
         legend.key.height = unit(0.8, 'lines'))
 
 

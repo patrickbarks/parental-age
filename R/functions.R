@@ -302,6 +302,10 @@ analyze_mod <- function(A_par_l, stasis = FALSE, checks = TRUE) {
   P_ref <- rowSums(stable_stage_par_rel * A_par_l$P_mat)
   F_ref <- rowSums(stable_stage_par_rel * A_par_l$F_mat)
   
+  ## take an unweighted average (response to Assoc. Ed.)
+  # P_ref <- rowMeans(A_par_l$P_mat)
+  # F_ref <- rowMeans(A_par_l$F_mat)
+  
   ## test: weight ref tr by relative repro value rather than stable stage
   v_mat_par <- matrix(v_par, byrow = TRUE, ncol = s)
   v_age_par <- rowSums(stable_stage_par_rel * v_mat_par)
