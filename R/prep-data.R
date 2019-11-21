@@ -5,9 +5,6 @@
 #                    "popdemo", "ggplot2", "gridExtra"))
 
 
-## Working directory should be Parental_Age_Scripts
-
-
 ## Load relevant packages / source required functions
 library(Matrix)
 library(dplyr)
