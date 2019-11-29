@@ -210,8 +210,8 @@ g_2_r2 <- cbind(g_2_2, g_2_4, g_2_6, size = 'last')
 fig_2 <- arrangeGrob(g_2_r1, g_2_r2, nrow = 2, heights = c(0.84, 1))
 
 # print (change 'quartz' to 'window' if using Windows)
-quartz(height = 4, width = 7.25, dpi = 150)
-grid.arrange(fig_2)
+# quartz(height = 4, width = 7.25, dpi = 150)
+# grid.arrange(fig_2)
 
 # write to file
 ggsave('img/Fig_2.png', fig_2, height = 4, width = 7.25, units = 'in', dpi = 300)
@@ -282,8 +282,8 @@ g_3_4 <- ggplotGrob(fig_3_4)
 fig_3 <- arrangeGrob(g_3_1, g_3_3, g_3_2, g_3_4, nrow = 2, heights = c(1, 1.155))
 
 # print (change 'quartz' to 'window' if using Windows)
-quartz(height = 4.2, width = 6, dpi = 190)
-grid.arrange(fig_3)
+# quartz(height = 4.2, width = 6, dpi = 190)
+# grid.arrange(fig_3)
 
 # write to file
 ggsave('img/Fig_3.png', fig_3, height = 4.2, width = 6, units = 'in', dpi = 300)
@@ -413,10 +413,9 @@ g_4_5 <- ggplotGrob(fig_4_5)
 fig_4 <- arrangeGrob(rbind(g_4_1, g_4_2, g_4_3, g_4_4, g_4_5, size = 'last'))
 fig_4$layout$clip[fig_4$layout$name == "panel"] <- "off"
 
-
 # print (change 'quartz' to 'window' if using Windows)
-quartz(height = 6.5, width = 6.25, dpi = 140)
-grid.arrange(fig_4)
+# quartz(height = 6.5, width = 6.25, dpi = 140)
+# grid.arrange(fig_4)
 
 # write to file
 ggsave('img/Fig_4.png', fig_4, height = 6.5, width = 6.25, units = 'in', dpi = 300)
@@ -527,8 +526,8 @@ g_5_4 <- ggplotGrob(fig_5_4)
 fig_5 <- arrangeGrob(g_5_1, g_5_2, g_5_3, g_5_4, nrow = 2, heights = c(0.86, 1))
 
 # print (change 'quartz' to 'window' if using Windows)
-quartz(height = 5, width = 5.75, dpi = 150)
-grid.arrange(fig_5)
+# quartz(height = 5, width = 5.75, dpi = 150)
+# grid.arrange(fig_5)
 
 # write figure to file
 ggsave('img/Fig_5.png', fig_5, height = 5, width = 5.75, units = 'in', dpi = 300)
@@ -749,8 +748,8 @@ fig_a9 <- arrangeGrob(rbind(g_a9_1, g_a9_2, g_a9_5, g_a9_4, g_a9_5, size = 'last
 fig_a9$layout$clip[fig_a9$layout$name == "panel"] <- "off"
 
 # print (change 'quartz' to 'window' if using Windows)
-quartz(height = 6.5, width = 6.25, dpi = 140)
-grid.arrange(fig_a9)
+# quartz(height = 6.5, width = 6.25, dpi = 140)
+# grid.arrange(fig_a9)
 
 # write to file
 ggsave('img/Fig_A9.png', fig_a9, height = 6.5, width = 6.25, units = 'in', dpi = 300)
@@ -957,8 +956,8 @@ fig_a10 <- arrangeGrob(rbind(g_10_1, g_10_2, g_10_3, g_10_4, g_10_5, size = 'las
 fig_a10$layout$clip[fig_a10$layout$name == "panel"] <- "off"
 
 # print (change 'quartz' to 'window' if using Windows)
-quartz(height = 6.5, width = 6.25, dpi = 140)
-grid.arrange(fig_a10)
+# quartz(height = 6.5, width = 6.25, dpi = 140)
+# grid.arrange(fig_a10)
 
 # write figure to file
 ggsave('img/Fig_A10.png', fig_a10, height = 6.5, width = 6.25, units = 'in', dpi = 300)

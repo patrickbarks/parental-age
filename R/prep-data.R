@@ -134,11 +134,12 @@ fig_a3 <- arrangeGrob(ggplotGrob(fig_a3_1),
                       ggplotGrob(fig_a3_2),
                       nrow = 1, widths = c(1, 1.27))
 
-quartz(height = 5, width = 6.25, dpi = 150)
-grid.arrange(fig_a3)
+# print (change 'quartz' to 'window' if using Windows)
+# quartz(height = 5, width = 6.25, dpi = 150)
+# grid.arrange(fig_a3)
 
-# write to file
-# ggsave('img/Fig_A3.png', fig_a3, height = 5, width = 6.25, units = 'in', dpi = 300)
+# write figure to file
+ggsave('img/Fig_A3.png', fig_a3, height = 5, width = 6.25, units = 'in', dpi = 300)
 
 
 
@@ -206,12 +207,12 @@ fig_a4 <- ggplot(dfs, aes(age, pred, col = j, group = j)) +
         legend.title = element_text(size = 9),
         legend.text = element_text(size = 8.2))
 
-dev.off()
-quartz(height = 6, width = 6.25, dpi = 150)
-print(fig_a4)
+# print (change 'quartz' to 'window' if using Windows)
+# quartz(height = 6, width = 6.25, dpi = 150)
+# print(fig_a4)
 
-# write to file
-# ggsave('img/Fig_A4.png', fig_a4, height = 6, width = 6.25, units = 'in', dpi = 300)
+# write figure to file
+ggsave('img/Fig_A4.png', fig_a4, height = 6, width = 6.25, units = 'in', dpi = 300)
 
 
 ### compare gam models for fecundity
@@ -279,12 +280,13 @@ fig_a5 <- ggplot(df, aes(age, pred, col = j, group = j)) +
         legend.title = element_text(size = 9),
         legend.text = element_text(size = 8.2))
 
-dev.off()
-quartz(height = 6, width = 6.25, dpi = 150)
-print(fig_a5)
 
-# write to file
-# ggsave('img/Fig_A5.png', fig_a5, height = 6, width = 6.25, units = 'in', dpi = 300)
+# print (change 'quartz' to 'window' if using Windows)
+# quartz(height = 6, width = 6.25, dpi = 150)
+# print(fig_a5)
+
+# write figure to file
+ggsave('img/Fig_A5.png', fig_a5, height = 6, width = 6.25, units = 'in', dpi = 300)
 
 
 ### arrange all transition rate
@@ -299,7 +301,6 @@ Tr_lemna_flat_plot <- expand.grid(age = seq(1, 30, 0.1), j = 1:8) %>%
   mutate(P_ij = predict(mods5, newdata = ., type = "response")) %>% 
   mutate(F_ij = predict(mod3, newdata = ., type = "response")) %>% 
   rename(i = age)
-
 
 
 ### write to file
@@ -454,8 +455,8 @@ g_a6_2 <- ggplotGrob(fig_a6_2)
 fig_a6 <- arrangeGrob(rbind(g_a6_1, g_a6_2, size = 'first'))
 
 # print (change 'quartz' to 'window' if using Windows)
-quartz(height = 4, width = 6, dpi = 150)
-grid.arrange(fig_a6)
+# quartz(height = 4, width = 6, dpi = 150)
+# grid.arrange(fig_a6)
 
 # write figure to file
 ggsave('img/Fig_A6.png', fig_a6, height = 4, width = 6, units = 'in', dpi = 300)
@@ -502,8 +503,8 @@ g_a7_2 <- ggplotGrob(fig_a7_2)
 fig_a7 <- arrangeGrob(rbind(g_a7_1, g_a7_2, size = 'first'))
 
 # print (change 'quartz' to 'window' if using Windows)
-quartz(height = 4, width = 6, dpi = 150)
-grid.arrange(fig_a7)
+# quartz(height = 4, width = 6, dpi = 150)
+# grid.arrange(fig_a7)
 
 # write figure to file
 ggsave('img/Fig_A7.png', fig_a7, height = 4, width = 6, units = 'in', dpi = 300)
@@ -544,8 +545,8 @@ g_a8_2 <- ggplotGrob(fig_a8_2)
 fig_a8 <- arrangeGrob(rbind(g_a8_1, g_a8_2, size = 'first'))
 
 # print (change 'quartz' to 'window' if using Windows)
-quartz(height = 4, width = 6, dpi = 150)
-grid.arrange(fig_a8)
+# quartz(height = 4, width = 6, dpi = 150)
+# grid.arrange(fig_a8)
 
 # write figure to file
 ggsave('img/Fig_A8.png', fig_a8, height = 4, width = 6, units = 'in', dpi = 300)
@@ -735,10 +736,5 @@ map_ij_sim <- Tr_sim %>%
 ## write to file (strongly positive parental age effect)
 write.csv(Tr_sim, 'dat/transition_rates_sim_strongly_pos.csv', row.names = FALSE)
 write.csv(map_ij_sim, 'dat/map_ij_sim_strongly_pos.csv', row.names = FALSE)
-
-
-
-
-
 
 
