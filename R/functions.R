@@ -416,7 +416,7 @@ SimulateParEffect <- function(P_i, F_i, s, P_range = 0.50, F_range = 0.15) {
   F_out <- F_gamma_mat * F_mat_raw
   
   out_df <- P_out %>% 
-    as_tibble() %>% 
+    as_tibble(.name_repair = "minimal") %>% 
     setNames(1:s) %>% 
     mutate(i = 1:o) %>% 
     gather(j, P_ij, -i) %>% 
@@ -447,7 +447,7 @@ SimulateParEffectRev <- function(P_i, F_i, s, P_range = 0.50, F_range = 0.15) {
   F_out <- F_gamma_mat * F_mat_raw
   
   out_df <- P_out %>% 
-    as_tibble() %>% 
+    as_tibble(.name_repair = "minimal") %>% 
     setNames(1:s) %>% 
     mutate(i = 1:o) %>% 
     gather(j, P_ij, -i) %>% 
